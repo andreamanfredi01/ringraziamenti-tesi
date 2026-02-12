@@ -30,8 +30,8 @@ GITHUB_IMG_BASE_URL = "https://raw.githubusercontent.com/tuo_nome_utente/tesi-ri
 # -------------------------------
 # CARICA PASSWORD DA .ENV
 # -------------------------------
-#dotenv_path = r"C:\Users\andre\PycharmProjects\Tesi\ringraziamenti\password.env"
-load_dotenv(dotenv_path)
+
+load_dotenv()
 
 # -------------------------------
 # FILE PER LOG NOMI INSERITI
@@ -140,3 +140,4 @@ if nome_input:
             st.error("❌ Password errata")
 
     st.write("---")
+
