@@ -46,29 +46,139 @@ GITHUB_IMG_BASE_URL = "https://raw.githubusercontent.com/tuo_nome_utente/tesi-ri
 # PASSWORD DA SECRETS
 # -------------------------------
 personal_thanks = {
+     "laura facchinetti": {
+        "category": "genitore",
+        "password": st.secrets["MAMMA_PASSWORD"],
+        "message": "Giulia, il tuo supporto silenzioso è stato fondamentale. Grazie per aver creduto in me anche quando io non ci riuscivo.",
+        "image": "giulia_bianchi.jpg"
+    },
+    "giorgio manfredi": {
+        "category": "genitore",
+        "password": st.secrets["PAPI_PASSWORD"],
+        "message": "Giulia, il tuo supporto silenzioso è stato fondamentale. Grazie per aver creduto in me anche quando io non ci riuscivo.",
+        "image": "giulia_bianchi.jpg"
+    },
     "chiara manfredi": {
         "category": "sorella",
         "password": st.secrets["CHIARA_PASSWORD"],
         "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
         "video": "chiara.mov"
     },
-    "giulia bianchi": {
-        "category": "genitore",
-        "password": st.secrets["MAMMA_PASSWORD"],
-        "message": "Giulia, il tuo supporto silenzioso è stato fondamentale. Grazie per aver creduto in me anche quando io non ci riuscivo.",
-        "image": "giulia_bianchi.jpg"
+    "francesco manfredi": {
+        "category": "fratello",
+        "password": st.secrets["CICCIO_PASSWORD"],
+        "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
+        "video": "chiara.mov"
     },
-     "laura facchinetti": {
-        "category": "genitore",
-        "password": st.secrets["PAPI_PASSWORD"],
-        "message": "Giulia, il tuo supporto silenzioso è stato fondamentale. Grazie per aver creduto in me anche quando io non ci riuscivo.",
-        "image": "giulia_bianchi.jpg"
+    "sara ravelli": {
+        "category": "",
+        "password": st.secrets["SARA_PASSWORD"],
+        "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
+        "video": "chiara.mov"
+    },
+    "noa linan": {
+        "category": "dublino",
+        "password": st.secrets["NOA_PASSWORD"],
+        "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
+        "video": "chiara.mov"
+    },
+    "manuel cueto": {
+        "category": "dublino",
+        "password": st.secrets["MANUEL_PASSWORD"],
+        "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
+        "video": "chiara.mov"
+    },
+    "andrea cucco": {
+        "category": "amici",
+        "password": st.secrets["CUCCO_PASSWORD"],
+        "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
+        "video": "chiara.mov"
+    },
+    "andrea monti": {
+        "category": "amici",
+        "password": st.secrets["SCIMMIA_PASSWORD"],
+        "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
+        "video": "chiara.mov"
+    },
+    "gabriel persico": {
+        "category": "amici",
+        "password": st.secrets["GABA_PASSWORD"],
+        "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
+        "video": "chiara.mov"
+    },
+    "david marchese": {
+        "category": "amici",
+        "password": st.secrets["DAVID_PASSWORD"],
+        "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
+        "video": "chiara.mov"
+    },
+    "matteo locatelli": {
+        "category": "amici",
+        "password": st.secrets["MATTI_PASSWORD"],
+        "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
+        "video": "chiara.mov"
+    },
+    "luca pesaresi": {
+        "category": "amici",
+        "password": st.secrets["KAPPA_PASSWORD"],
+        "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
+        "video": "chiara.mov"
+    },
+    "davide villa": {
+        "category": "amici",
+        "password": st.secrets["VILLA_PASSWORD"],
+        "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
+        "video": "chiara.mov"
+    },
+    "francesco cantini": {
+        "category": "amici",
+        "password": st.secrets["CANTI_PASSWORD"],
+        "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
+        "video": "chiara.mov"
+    },
+    "marco pastore": {
+        "category": "amici",
+        "password": st.secrets["PASTO_PASSWORD"],
+        "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
+        "video": "chiara.mov"
+    },
+    "riccardo galimberti": {
+        "category": "redona",
+        "password": st.secrets["RICHI_PASSWORD"],
+        "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
+        "video": "chiara.mov"
+    },
+    "luca galimberti": {
+        "category": "redona",
+        "password": st.secrets["LUCA_PASSWORD"],
+        "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
+        "video": "chiara.mov"
+    },
+    "filippo rossi": {
+        "category": "redona",
+        "password": st.secrets["ROVO_PASSWORD"],
+        "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
+        "video": "chiara.mov"
+    },
+    "diego gandossi": {
+        "category": "redona",
+        "password": st.secrets["DIEGO_PASSWORD"],
+        "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
+        "video": "chiara.mov"
+    },
+    "federico mistri": {
+        "category": "redona",
+        "password": st.secrets["FEDE_PASSWORD"],
+        "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
+        "video": "chiara.mov"
+    },
+    "nicola piazzalunga": {
+        "category": "",
+        "password": st.secrets["NICOLA_PASSWORD"],
+        "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
+        "video": "chiara.mov"
     },
     
-
-
-
-
     
     "lista nomi": {
         "category": "lista",
@@ -153,5 +263,6 @@ if nome_input:
             st.error("❌ Password errata")
 
     st.write("---")
+
 
 
