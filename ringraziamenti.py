@@ -46,18 +46,30 @@ GITHUB_IMG_BASE_URL = "https://raw.githubusercontent.com/tuo_nome_utente/tesi-ri
 # PASSWORD DA SECRETS
 # -------------------------------
 personal_thanks = {
-    "mario rossi": {
-        "category": "amici",
-        "password": st.secrets["MARIO_PASSWORD"],
+    "chiara manfredi": {
+        "category": "sorella",
+        "password": st.secrets["CHIARA_PASSWORD"],
         "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
-        "image": "mario_rossi.jpg"
+        "video": "chiara.mov"
     },
     "giulia bianchi": {
-        "category": "famiglia",
-        "password": st.secrets["GIULIA_PASSWORD"],
+        "category": "genitore",
+        "password": st.secrets["MAMMA_PASSWORD"],
         "message": "Giulia, il tuo supporto silenzioso è stato fondamentale. Grazie per aver creduto in me anche quando io non ci riuscivo.",
         "image": "giulia_bianchi.jpg"
     },
+     "laura facchinetti": {
+        "category": "genitore",
+        "password": st.secrets["PAPI_PASSWORD"],
+        "message": "Giulia, il tuo supporto silenzioso è stato fondamentale. Grazie per aver creduto in me anche quando io non ci riuscivo.",
+        "image": "giulia_bianchi.jpg"
+    },
+    
+
+
+
+
+    
     "lista nomi": {
         "category": "lista",
         "password": st.secrets["LISTA_NOMI"],
@@ -141,4 +153,5 @@ if nome_input:
             st.error("❌ Password errata")
 
     st.write("---")
+
 
