@@ -1,10 +1,7 @@
-# cd C:\Users\andre\PycharmProjects\Tesi\ringraziamenti
-# streamlit run C:\Users\andre\PycharmProjects\Tesi\ringraziamenti\ringraziamenti.py
 import streamlit as st
-from dotenv import load_dotenv
 import os
-
-
+import gspread
+from google.oauth2.service_account import Credentials
 
 # -------------------------------
 # CONFIGURAZIONE PAGINA
@@ -23,63 +20,52 @@ st.title("Un ringraziamento speciale")
 st.write("Inserisci il tuo nome e cognome per leggere il messaggio dedicato a te.")
 
 # -------------------------------
+# CONNESSIONE GOOGLE SHEETS
+# -------------------------------
+scope = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive"
+]
+
+creds = Credentials.from_service_account_info(
+    st.secrets["gcp_service_account"],
+    scopes=scope
+)
+
+client = gspread.authorize(creds)
+
+SHEET_NAME = "lista nomi"   # ⚠️ deve essere identico al nome del tuo foglio
+sheet = client.open(SHEET_NAME).sheet1
+
+# -------------------------------
 # LINK IMMAGINI GITHUB
 # -------------------------------
 GITHUB_IMG_BASE_URL = "https://raw.githubusercontent.com/tuo_nome_utente/tesi-ringraziamenti/main/img/"
 
 # -------------------------------
-# CARICA PASSWORD DA .ENV
-# -------------------------------
-
-load_dotenv()
-
-# -------------------------------
-# FILE PER LOG NOMI INSERITI
-# -------------------------------
-FILE_NOMI = "nomi_inseriti.txt"
-
-# -------------------------------
-# PERSONE SPECIFICHE (PASSWORD DIVERSE)
+# PASSWORD DA SECRETS
 # -------------------------------
 personal_thanks = {
     "mario rossi": {
         "category": "amici",
-        "password": os.getenv("MARIO_PASSWORD"),
+        "password": st.secrets["MARIO_PASSWORD"],
         "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
         "image": "mario_rossi.jpg"
     },
     "giulia bianchi": {
         "category": "famiglia",
-        "password": os.getenv("GIULIA_PASSWORD"),
+        "password": st.secrets["GIULIA_PASSWORD"],
         "message": "Giulia, il tuo supporto silenzioso è stato fondamentale. Grazie per aver creduto in me anche quando io non ci riuscivo.",
         "image": "giulia_bianchi.jpg"
     },
-    # ---- lista nomi come “utente speciale” ----
     "lista nomi": {
         "category": "lista",
-        "password": os.getenv("LISTA_NOMI"),  # password nel .env
+        "password": st.secrets["LISTA_NOMI"],
         "message": "Qui puoi vedere la lista dei nomi inseriti.",
         "image": None
     }
 }
 
-# -------------------------------
-# CATEGORIE GENERALI (LIBERE)
-# -------------------------------
-category_thanks = {
-    "famiglia": {
-        "message": "Alla mia famiglia: grazie per il sostegno costante e per essere sempre stata il mio punto fermo.",
-        "image": "famiglia.jpg"
-    },
-    "amici": {
-        "message": "Ai miei amici: grazie per le risate, la leggerezza e la forza che mi avete dato in questo percorso.",
-        "image": "amici.jpg"
-    }
-}
-
-# -------------------------------
-# DEFAULT
-# -------------------------------
 default_message = "Grazie per aver fatto parte del mio percorso."
 default_image = "default.jpg"
 
@@ -89,11 +75,21 @@ default_image = "default.jpg"
 nome_input = st.text_input("Inserisci Nome e Cognome").lower().strip()
 
 # -------------------------------
-# SALVA NOME INSERITO
+# SALVA / AGGIORNA CONTEGGIO
 # -------------------------------
 if nome_input and nome_input != "lista nomi":
-    with open(FILE_NOMI, "a", encoding="utf-8") as f:
-        f.write(nome_input + "\n")
+    records = sheet.get_all_records()
+    found = False
+
+    for i, row in enumerate(records):
+        if row["nome"].lower() == nome_input:
+            current_count = int(row["conteggio"])
+            sheet.update_cell(i + 2, 2, current_count + 1)
+            found = True
+            break
+
+    if not found:
+        sheet.append_row([nome_input, 1])
 
 # -------------------------------
 # LOGICA PRINCIPALE
@@ -101,10 +97,9 @@ if nome_input and nome_input != "lista nomi":
 if nome_input:
     st.write("---")
 
-    # recupera dati personalizzati, altrimenti crea placeholder
     data = personal_thanks.get(nome_input, {
         "category": "generale",
-        "password": "placeholder",  # password fittizia per chi non c'è
+        "password": "placeholder",
         "message": "Presto ci sarà il tuo messaggio personalizzato!",
         "image": default_image
     })
@@ -116,28 +111,33 @@ if nome_input:
 
     if password_input:
         if password_input == data["password"]:
-            # ---- CASO SPECIALE: LISTA NOMI ----
+
+            # ---- LISTA NOMI CON CONTEGGIO ----
             if nome_input == "lista nomi":
                 st.success("📋 Lista dei nomi inseriti:")
-                if os.path.exists(FILE_NOMI):
-                    with open(FILE_NOMI, "r", encoding="utf-8") as f:
-                        nomi = sorted(set(f.read().splitlines()))
-                    for n in nomi:
-                        st.write(f"- {n.title()}")
+
+                records = sheet.get_all_records()
+
+                if records:
+                    for row in sorted(records, key=lambda x: x["nome"]):
+                        st.write(f"- {row['nome'].title()} ({row['conteggio']} volte)")
                 else:
                     st.info("Nessun nome registrato.")
+
             # ---- CASO NORMALE ----
             else:
                 st.balloons()
+
                 if data.get("image"):
                     st.image(
                         GITHUB_IMG_BASE_URL + data["image"],
                         caption=f"Per {nome_input.title()}",
                         use_container_width=True
                     )
+
                 st.markdown(f"**{data['message']}**")
+
         else:
             st.error("❌ Password errata")
 
     st.write("---")
-
