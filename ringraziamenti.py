@@ -17,7 +17,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.title("Un ringraziamento speciale")
-st.write("Inserisci il tuo nome e cognome per leggere il messaggio dedicato a te.")
+st.write("Inserisci nome e cognome per leggere il messaggio dedicato a te.")
 
 # -------------------------------
 # CONNESSIONE GOOGLE SHEETS
@@ -34,7 +34,7 @@ creds = Credentials.from_service_account_info(
 
 client = gspread.authorize(creds)
 
-SHEET_NAME = "lista nomi"   # ⚠️ deve essere identico al nome del tuo foglio
+SHEET_NAME = "lista"   # ⚠️ deve essere identico al nome del tuo foglio
 sheet = client.open(SHEET_NAME).sheet1
 
 # -------------------------------
@@ -100,12 +100,12 @@ if nome_input:
     data = personal_thanks.get(nome_input, {
         "category": "generale",
         "password": "placeholder",
-        "message": "Presto ci sarà il tuo messaggio personalizzato!",
+        "message": "Presto vedrai il tuo messaggio!",
         "image": default_image
     })
 
     st.success(f"### Dedicato a: {nome_input.title()}")
-    st.warning("🔒 Questo messaggio è protetto")
+    st.warning("🔒 Questo messaggio è protetto. Contattami per la password")
 
     password_input = st.text_input("Inserisci la password", type="password")
 
@@ -141,3 +141,4 @@ if nome_input:
             st.error("❌ Password errata")
 
     st.write("---")
+
