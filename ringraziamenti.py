@@ -16,8 +16,11 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.title("Un ringraziamento speciale")
-st.write("Inserisci nome e cognome per leggere il messaggio dedicato a te.")
+st.markdown(
+    "<h1 style='text-align: center;'>Un ringraziamento speciale</h1>",
+    unsafe_allow_html=True
+)
+
 
 # -------------------------------
 # CONNESSIONE GOOGLE SHEETS
@@ -263,6 +266,7 @@ if nome_input:
             st.error("❌ Password errata")
 
     st.write("---")
+
 
 
 
