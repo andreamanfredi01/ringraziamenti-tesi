@@ -4,6 +4,24 @@ import gspread
 from google.oauth2.service_account import Credentials
 
 
+PARENTI = [
+    "claudia facchinetti",
+    "umberto facchinetti",
+    "paola facchinetti",
+    "stefano facchinetti",
+    "enrico facchetti",
+    "massimo facchetti",
+    "barbara malinverni",
+    "giuseppe fogaroli",
+    "giulio fogaroli",    
+    "giuseppe pagani",
+    "gabriele pagani",
+    "anna manfredi",
+    "maria manfredi",
+    "luca varinelli",
+    "alberto varinelli",
+    "giovanni varinelli "
+]
 
 # -------------------------------
 # CONFIGURAZIONE PAGINA
@@ -263,35 +281,47 @@ if nome_input and nome_input != "lista nomi":
 # -------------------------------
 if nome_input:
     st.write("---")
+    nome_norm = nome_input.strip().lower()
 
-    # Recupera dati della persona
-    data = personal_thanks.get(nome_input, {
-        "category": "generale",
-        "password": "placeholder",
-        "message": "Presto vedrai il tuo messaggio!",
-        "image": default_image
-    })
+    # ---- CONTROLLO PARENTI SENZA PASSWORD ----
+    if nome_norm in PARENTI:
+        st.success(f"### Dedicato a: {nome_input.title()}")
+        st.write("""
+Ai miei parenti,
+grazie per esserci stati in questo percorso, ognuno a modo suo.
+Sapere che facevate il tifo per me è stato importante.
+Sono felice di poter condividere questo traguardo con voi.
+""")
+        st.balloons()
+    
+    else:
+        # Recupera dati della persona
+        data = personal_thanks.get(nome_input, {
+            "category": "generale",
+            "password": "placeholder",
+            "message": "Presto vedrai il tuo messaggio!",
+            "image": default_image
+        })
 
-    st.success(f"### Dedicato a: {nome_input.title()}")
-    st.warning("🔒 Questo messaggio è protetto. Contattami per la password")
+        st.success(f"### Dedicato a: {nome_input.title()}")
+        st.warning("🔒 Questo messaggio è protetto. Contattami per la password")
 
-    password_input = st.text_input("Inserisci la password", type="password")
+        password_input = st.text_input("Inserisci la password", type="password")
 
-    if password_input:
-        if password_input == data["password"]:
+        if password_input:
+            if password_input == data["password"]:
 
-            # ---- LISTA NOMI CON CONTEGGIO ----
-            if nome_input == "lista nomi":
-                st.success("📋 Lista dei nomi inseriti:")
-
-                records = sheet.get_all_records()
-                if records:
-                    for row in sorted(records, key=lambda x: x["nome"]):
-                        st.write(f"- {row['nome'].title()} ({row['conteggio']} volte)")
+                if nome_input == "lista nomi":
+                    st.success("📋 Lista dei nomi inseriti:")
+                    records = sheet.get_all_records()
+                    if records:
+                        for row in sorted(records, key=lambda x: x["nome"]):
+                            st.write(f"- {row['nome'].title()} ({row['conteggio']} volte)")
+                    else:
+                        st.info("Nessun nome registrato.")
                 else:
-                    st.info("Nessun nome registrato.")
-            else:
-               st.balloons()
+                    st.balloons()
+
 
 
             # -------- MESSAGGIO --------
@@ -317,13 +347,13 @@ if nome_input:
             # -------- EXTRA PER AMICI --------
             if category == "amici":
                 st.write("---")
-                if st.button("Quando hai finito clicca 👇"):
-                    st.success("gabri… gabri giù tutto 🍻")
+                if st.button("Quando hai bevuto clicca 👇"):
+                    st.success("Gabri… Gabri giù tutto 🍻")
             
             if category == "redona":
                 st.write("---")
-                if st.button("Quando hai finito clicca 👇"):
-                    st.success("Giù tutto cunningham🍻")
+                if st.button("Quando hai bevuto clicca 👇"):
+                    st.success("Giù tutto Cunningham🍻")
 
             # -------- VIDEO --------
             # Video di categoria
@@ -375,6 +405,7 @@ if nome_input:
                         use_container_width=True
                     )
           
+
 
 
 
