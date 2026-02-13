@@ -75,20 +75,17 @@ personal_thanks = {
         "category": "fratello",
         "password": st.secrets["CICCIO_PASSWORD"],
         "message": """Ciao Ciccio,
-                    Ti ringrazio per essere presente in questo momento. É stato un anno di cambiamenti sotto diversi aspetti per te e presto lo sarà anche per me. So che hai passato periodi migliori, e se vuoi parlare di qualcosa sono qua. O ciccia Chiara anche, se preferisci parlare con lei, la obbligo, basta chiedere.
-                    So molto poco di tutta la situazione, ma ti dico solo che non c’é motivo di stare così,  vivila con più leggerezza e parlane con qualcuno, anche un professionista o un prete, serve a liberarsi e lasciarsi andare.
-                    Mettiti sempre al primo posto.
-                    Per il resto ti ringrazio anche per il futuro, so che nel caso venissi a lavorare a Milano mi ospiteresti gràtis da buon terrone e non é da tutti gràtis""",
+        Ti ringrazio per essere presente in questo momento. É stato un anno di cambiamenti sotto diversi aspetti per te e presto lo sarà anche per me. So che hai passato periodi migliori, e se vuoi parlare di qualcosa sono qua. O ciccia Chiara anche, se preferisci parlare con lei, la obbligo, basta chiedere.
+        So molto poco di tutta la situazione, ma ti dico solo Mettiti sempre al primo posto e che non c’é motivo di stare così,  vivila con più leggerezza e parlane con qualcuno.
+        Per il resto ti ringrazio anche per il futuro, so che nel caso venissi a lavorare a Milano mi ospiteresti gràtis da buon terrone e non é da tutti gràtis""",
         "video": "Bismarck.mov"
     },
     "sara ravelli": {
         "category": "",
         "password": st.secrets["SARA_PASSWORD"],
         "message": """Ciao cuore,
-
-                    É finita anche questa e anche stavolta si prospettano cambiamenti. Cambiamenti importanti, d’altronde non c’è due senza tre, ma ci sono anche le eccezioni! E quindi si siamo ancora qua e vedremo cosa ci riserverà il futuro, non posso prometterti nulla, non me la sento di prometterti nulla, valuterò tutte le opzioni prima dal punto di vista lavorativo e poi le rivaluterò tutte dal punto di vista personale. Sei molto molto molto importante per me e vorrei supporto e aiuto nel scegliere, e la ciliegina sarebbe che tu fossi aperta a più orizzonti. Al momento siamo ancora qua, ne abbiamo passate tante e non penso questa sia più difficile di altre, é solo la prossima sfida. 
-                    
-                    Ti ringrazio per tutto, tutti i momenti belli trascorsi insieme ma anche tutti i momenti complicati: é tutto ciò che mi ha portato fin qui, fino ad oggi un momento speciale, sofferto, voluto e interminabile a tratti, un momento che voglio godermi con te, che mi conosci meglio di tutti """,
+        É finita anche questa e anche stavolta si prospettano cambiamenti. Cambiamenti importanti, d’altronde non c’è due senza tre, ma ci sono anche le eccezioni! E quindi si siamo ancora qua e vedremo cosa ci riserverà il futuro, non posso prometterti nulla, non me la sento di prometterti nulla, valuterò tutte le opzioni prima dal punto di vista lavorativo e poi le rivaluterò tutte dal punto di vista personale. Sei molto molto molto importante per me e vorrei supporto e aiuto nel scegliere, e la ciliegina sarebbe che tu fossi aperta a più orizzonti. Al momento siamo ancora qua, ne abbiamo passate tante e non penso questa sia più difficile di altre, é solo la prossima sfida. 
+        Ti ringrazio per tutto, tutti i momenti belli trascorsi insieme ma anche tutti i momenti complicati: é tutto ciò che mi ha portato fin qui, fino ad oggi un momento speciale, sofferto, voluto e interminabile a tratti, un momento che voglio godermi con te, che mi conosci meglio di tutti """,
         "video":["Sara1.mov", "Sara2.mov", "Sara3.mov"],
         "image" : ["s1.PNG", "s2.PNG"]
     },
@@ -96,12 +93,11 @@ personal_thanks = {
         "category": "dublino",
         "password": st.secrets["NOA_PASSWORD"],
         "message": """Noa, Noa, Noa…
-                    La rizada más increíble                     
-                    ¿Qué decir? Ya te he dicho casi todo después de la despedida, pero si estás leyendo esto, habrà un motivo.                 
-                    Creo que el período que pasé en Dublín fue un tornado de cosas y, al volver a casa y procesarlo todo, me di cuenta de que he encontrado a una persona con defectos por todos lados… para, para, para.                   
-                    He encontrado a una persona en la que descubría algo bueno cada vez, y cada vez con un matiz diferente. Tienes una luz interior muy fuerte y también te digo que la noche en la que hablamos toda la noche fue algo que nunca me había pasado con otras personas.
-                                                     
-                    Tengo un recuerdo especial de ti y espero cruzar tu camino otra vez.""",
+        La rizada más increíble
+        ¿Qué decir? Ya te he dicho casi todo después de la despedida, pero si estás leyendo esto, habrà un motivo.
+        Creo que el período que pasé en Dublín fue un tornado de cosas y, al volver a casa y procesarlo todo, me di cuenta de que he encontrado a una persona con defectos por todos lados… para, para, para.                   
+        He encontrado a una persona en la que descubría algo bueno cada vez, y cada vez con un matiz diferente. Tienes una luz interior muy fuerte y también te digo que la noche en la que hablamos toda la noche fue algo que nunca me había pasado con otras personas.
+        Tengo un recuerdo especial de ti y espero cruzar tu camino otra vez.""",
         "image" : "dub.HEIC",
         "video": "noa.mov"         
     },
@@ -109,10 +105,10 @@ personal_thanks = {
         "category": "dublino",
         "password": st.secrets["MANUEL_PASSWORD"],
         "message": """Hola, niño, ¿qué tal?
-                    Qué increíble es la vida. A veces la fortuna está ciega… y otras veces ve perfectamente. Cuando abrí la puerta del piso por primera vez, no me imaginaba que iba a compartir tres meses con una modelo sueca ninfo de 1,90… pero tampoco con Bin Laden.
-                    Luego te encontré a ti y pasé algunos de los mejores meses de mi vida. Fue una experiencia increíble y te agradezco todos los momentos que compartimos.
-                    Eres un bravo niño y muy maduro para tu edad. Sigue así y nos vemos pronto.
-                    PS La sueca ninfo tampoco habría estado mal, la verdad…""",
+        Qué increíble es la vida. A veces la fortuna está ciega… y otras veces ve perfectamente. Cuando abrí la puerta del piso por primera vez, no me imaginaba que iba a compartir tres meses con una modelo sueca ninfo de 1,90… pero tampoco con Bin Laden.
+        Luego te encontré a ti y pasé algunos de los mejores meses de mi vida. Fue una experiencia increíble y te agradezco todos los momentos que compartimos.
+        Eres un bravo niño y muy maduro para tu edad. Sigue así y nos vemos pronto.
+        PS La sueca ninfo tampoco habría estado mal, la verdad…""",
         "image" : ["dub.HEIC", "manuel.jpg" , "manuel5.HEIC", "manuel6.HEIC"]
     },
     "andrea cucco": {
@@ -197,9 +193,9 @@ personal_thanks = {
         "category": "",
         "password": st.secrets["NICOLA_PASSWORD"],
         "message": """Grazie per aver fatto parte di questo lungo percorso, che ora giunge al termine.
-                    È stato un lungo viaggio dalle superiori, da spaccarsi dal ridere.
-                    Stavo riguardando quel poco che mi è rimasto in galleria e ne è passato parecchio di tempo…
-                    bei momenti""",
+        È stato un lungo viaggio dalle superiori, da spaccarsi dal ridere.
+        Stavo riguardando quel poco che mi è rimasto in galleria e ne è passato parecchio di tempo…
+        bei momenti""",
         "image" : ["nicola2.PNG" , "nicola1.PNG", "nicola5.PNG", "nicola3.PNG"],
         "video" : "nicola.mp4"
     },
@@ -218,33 +214,24 @@ default_image = "default.jpg"
 category_content = {
     "genitore": {
         "message": """Ciao genitori,
-
-Vi ringrazio per avermi permesso di studiare qua. Siete stati molto disponibili, anche troppo, a permettermi questo corso magistrale. Più di 20000 euro in un paio di anni, quanti soldi — ma poi sì, vostro figlio si laurea alla Cattolica, certo. Ma in cosa? Mercati? Computer? Non saprei come descriverlo senza sembrare altezzoso e spocchioso come alcune persone che ho incontrato qua dentro, e quindi evito. È comunque molto spendibile e richiesta.
-
-Vi ringrazio per ogni cosa che avete fatto per me e soprattutto per tutte le “battaglie” che ho portato e porto avanti con voi: se non le avessi fatte sarei uscito macellato da qua. C’è chi esce con 110 e lode da questo corso, come negli altri, ma anche avendo fatto il corso perfetto per me non avrei mai ottenuto quei voti. Non fa per me.
-
-In ogni caso ho finito e ora vedrò che fare. Neanche l’Italia forse fa per me, ma per questo mi prenderò del tempo per valutare.
-
-Nel ringraziarvi vi invito a leggere un testo che avevo scritto in quarta o quinta superiore, se lo abbiamo ancora o se lo abbiamo mai avuto.""",
+        Vi ringrazio per avermi permesso di studiare qua. Siete stati molto disponibili, anche troppo, a permettermi questo corso magistrale. Più di 20000 euro in un paio di anni, quanti soldi — ma poi sì, vostro figlio si laurea alla Cattolica, certo. Ma in cosa? Mercati? Computer? Non saprei come descriverlo senza sembrare altezzoso e spocchioso come alcune persone che ho incontrato qua dentro, e quindi evito. È comunque molto spendibile e richiesta.Vi ringrazio per ogni cosa che avete fatto per me e soprattutto per tutte le “battaglie” che ho portato e porto avanti con voi: se non le avessi fatte sarei uscito macellato da qua. C’è chi esce con 110 e lode da questo corso, come negli altri, ma anche avendo fatto il corso perfetto per me non avrei mai ottenuto quei voti. Non fa per me.
+        In ogni caso ho finito e ora vedrò che fare. Neanche l’Italia forse fa per me, ma per questo mi prenderò del tempo per valutare.
+        Nel ringraziarvi vi invito a leggere un testo che avevo scritto in quarta o quinta superiore, se lo abbiamo ancora o se lo abbiamo mai avuto.""",
         "image": "genitori.jpg",
         "video": "genitori.mp4"
     },
 
     "amici": {
         "message": """Grazie per aver fatto parte di questo percorso, che ora giunge al termine.
-
-Che dire se non… grazie per tutti i momenti condivisi e per quelli che ancora ci aspettano.
-
-E ora… in alto i calici!""",
+        Che dire se non… grazie per tutti i momenti condivisi e per quelli che ancora ci aspettano.
+        E ora… in alto i calici!""",
         "video": ["Gaba(1).mov","Gaba.mov"]
     },
 
     "redona": {
-        "message": """Grazie per aver fatto parte di questo lungo percorso, che ora giunge al termine.
-
-Che dire se non… grazie per tutti i momenti condivisi e per quelli che ancora ci aspettano.
-
-E ora… in alto i calici!""",
+        "message": """Grazie per aver fatto parte di questo percorso, che ora giunge al termine.
+        Che dire se non… grazie per tutti i momenti condivisi e per quelli che ancora ci aspettano.
+        E ora… in alto i calici!""",
         "video": ["Richi.mov","Richi(1).mov", "Richi(2).mov"]
     }
 }
@@ -357,6 +344,7 @@ if nome_input:
             """, unsafe_allow_html=True)
             
             
+
 
 
 
