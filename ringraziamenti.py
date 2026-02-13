@@ -66,9 +66,9 @@ personal_thanks = {
     "chiara manfredi": {
         "category": "sorella",
         "password": st.secrets["CHIARA_PASSWORD"],
-        "message": """Ciao ciccia Chiara ho fornuto anche questa e non é stato facile assai. Ci sono momenti difficili, di smarrimento che nessuno sa e che ti sto raccontando adesso, momenti che affronterai anche te e quando ti sembrerà di non sapere che fare, devi saper valutare tutte le opzioni e saper fare le scelte giuste, e la scelta giusta spesso é non scegliere, attendere, e aspettare il momento giusto per fare ciò che ti senti.
-                    Ti ringrazio per esserti concessa l’opportunità di avermi accanto. 
-                    Ora andrò a lavorare magari lontano o magari no, ovunque vada sappi che potrai venirmi a trovare quando vorrai. Penso che comprerò un animaletto se andrò lontano e lo chiamerò cicciaobesachiara. Appena avrò una minima stabilità economica di riserverò un trattamento speciale, che a me sarebbe piaciuto molto, ma ne parleremo.""",
+        "message": """Ciao ciccia Chiara ho fornuto anche questa e non é stato facile assai. Ci sono momenti difficili, di smarrimento che nessuno sa e che ti sto raccontando adesso, momenti che affronterai anche te e quando ti sembrerà di non sapere che fare, devi saper valutare tutte le opzioni e saper fare le scelte giuste, e la scelta giusta spesso é non scegliere, attendere, e aspettare il momento giusto per fare ciò che ti senti. 
+        Ti ringrazio per esserti concessa l’opportunità di avermi accanto.
+        Ora andrò a lavorare magari lontano o magari no, ovunque vada sappi che potrai venirmi a trovare quando vorrai. Penso che comprerò un animaletto se andrò lontano e lo chiamerò cicciaobesachiara. Appena avrò una minima stabilità economica di riserverò un trattamento speciale, che a me sarebbe piaciuto molto, ma ne parleremo.""",
         "video": "Chiara.mov"
     },
     "francesco manfredi": {
@@ -357,6 +357,7 @@ if nome_input:
             """, unsafe_allow_html=True)
             
             
+
 
 
 
