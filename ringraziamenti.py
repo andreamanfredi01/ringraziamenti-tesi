@@ -307,38 +307,65 @@ if nome_input:
                     st.info("Nessun nome registrato.")
 
                         # ---- CASO NORMALE ----
-            else:
-                st.balloons()
-            
+                        else:
+                st.balloons()   # se vuoi poi metti i coriandoli al posto di questo
+
                 category = data.get("category")
-            
-                # -------- IMMAGINE CATEGORIA --------
+
+                # -------- IMMAGINI CATEGORIA --------
                 if category in category_content and category_content[category].get("image"):
-                    st.image(
-                        GITHUB_IMG_BASE_URL + category_content[category]["image"],
-                        use_container_width=True
-                    )
-            
+                    images = category_content[category]["image"]
+
+                    if isinstance(images, list):
+                        for img in images:
+                            st.image(
+                                GITHUB_IMG_BASE_URL + img,
+                                use_container_width=True
+                            )
+                    else:
+                        st.image(
+                            GITHUB_IMG_BASE_URL + images,
+                            use_container_width=True
+                        )
+
                 # -------- VIDEO CATEGORIA --------
                 if category in category_content and category_content[category].get("video"):
-                    st.video(
-                        GITHUB_VIDEO_BASE_URL + category_content[category]["video"]
-                    )
-            
-                # -------- IMMAGINE PERSONALE (EXTRA) --------
+                    videos = category_content[category]["video"]
+
+                    if isinstance(videos, list):
+                        for vid in videos:
+                            st.video(GITHUB_VIDEO_BASE_URL + vid)
+                    else:
+                        st.video(GITHUB_VIDEO_BASE_URL + videos)
+
+                # -------- IMMAGINI PERSONALI --------
                 if data.get("image"):
-                    st.image(
-                        GITHUB_IMG_BASE_URL + data["image"],
-                        caption=f"Un ricordo speciale per {nome_input.title()}",
-                        use_container_width=True
-                    )
-            
-                # -------- VIDEO PERSONALE (EXTRA) --------
+                    images = data["image"]
+
+                    if isinstance(images, list):
+                        for img in images:
+                            st.image(
+                                GITHUB_IMG_BASE_URL + img,
+                                caption=f"Un ricordo speciale per {nome_input.title()}",
+                                use_container_width=True
+                            )
+                    else:
+                        st.image(
+                            GITHUB_IMG_BASE_URL + images,
+                            caption=f"Un ricordo speciale per {nome_input.title()}",
+                            use_container_width=True
+                        )
+
+                # -------- VIDEO PERSONALI --------
                 if data.get("video"):
-                    st.video(
-                        GITHUB_VIDEO_BASE_URL + data["video"]
-                    )
-            
+                    videos = data["video"]
+
+                    if isinstance(videos, list):
+                        for vid in videos:
+                            st.video(GITHUB_VIDEO_BASE_URL + vid)
+                    else:
+                        st.video(GITHUB_VIDEO_BASE_URL + videos)
+
                 # -------- MESSAGGIO --------
                 if data.get("message"):
                     final_message = data["message"]
@@ -346,9 +373,5 @@ if nome_input:
                     final_message = category_content[category]["message"]
                 else:
                     final_message = default_message
-            
-                st.markdown(f"**{final_message}**")
-            
-            
-            
 
+                st.markdown(f"**{final_message}**")
