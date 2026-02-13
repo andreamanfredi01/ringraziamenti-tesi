@@ -2,7 +2,8 @@ import streamlit as st
 import os
 import gspread
 from google.oauth2.service_account import Credentials
-import streamlit.components.v1 as components
+from streamlit_confetti import st_confetti
+
 
 # -------------------------------
 # CONFIGURAZIONE PAGINA
@@ -290,52 +291,7 @@ if nome_input:
                 else:
                     st.info("Nessun nome registrato.")
             else:
-
-                components.html("""
-                <canvas id="confetti-canvas"></canvas>
-                <script>
-                var canvas = document.getElementById("confetti-canvas");
-                var ctx = canvas.getContext("2d");
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-                
-                var pieces = [];
-                for (var i = 0; i < 150; i++) {
-                    pieces.push({
-                        x: Math.random() * canvas.width,
-                        y: Math.random() * canvas.height - canvas.height,
-                        r: Math.random() * 6 + 4,
-                        d: Math.random() * 50,
-                        color: "hsl(" + Math.random() * 360 + ", 100%, 50%)",
-                        tilt: Math.floor(Math.random() * 10) - 10
-                    });
-                }
-                
-                function draw() {
-                    ctx.clearRect(0, 0, canvas.width, canvas.height);
-                    for (var i = 0; i < pieces.length; i++) {
-                        var p = pieces[i];
-                        ctx.beginPath();
-                        ctx.fillStyle = p.color;
-                        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2, false);
-                        ctx.fill();
-                    }
-                    update();
-                }
-                
-                function update() {
-                    for (var i = 0; i < pieces.length; i++) {
-                        var p = pieces[i];
-                        p.y += 3;
-                        if (p.y > canvas.height) {
-                            p.y = -10;
-                        }
-                    }
-                }
-                
-                setInterval(draw, 20);
-                </script>
-                """, height=0)
+                st_confetti()
 
 
             # -------- MESSAGGIO --------
@@ -407,6 +363,7 @@ if nome_input:
                         GITHUB_IMG_BASE_URL + images,
                         use_container_width=True
                     )
+
 
 
 
