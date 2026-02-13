@@ -43,8 +43,8 @@ sheet = client.open(SHEET_NAME).sheet1
 # -------------------------------
 # LINK IMMAGINI GITHUB
 # -------------------------------
-GITHUB_IMG_BASE_URL = "https://raw.githubusercontent.com/andreamanfredi01/tesi-ringraziamenti/main/img/"
-GITHUB_VIDEO_BASE_URL = "https://raw.githubusercontent.com/andreamanfredi01/tesi-ringraziamenti/main/img/"
+GITHUB_IMG_BASE_URL = "https://raw.githubusercontent.com/andreamanfredi01/ringraziamenti-tesi/main/img/"
+GITHUB_VIDEO_BASE_URL = "https://raw.githubusercontent.com/andreamanfredi01/ringraziamenti-tesi/main/img/"
 
 # -------------------------------
 # PASSWORD DA SECRETS
@@ -344,6 +344,7 @@ if nome_input:
             """, unsafe_allow_html=True)
             
             
+
 
 
 
