@@ -2,6 +2,7 @@ import streamlit as st
 import os
 import gspread
 from google.oauth2.service_account import Credentials
+import streamlit.components.v1 as components
 
 # -------------------------------
 # CONFIGURAZIONE PAGINA
@@ -289,33 +290,15 @@ if nome_input:
                 else:
                     st.info("Nessun nome registrato.")
             else:
-                st.markdown("""
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-<script>
-var duration = 2 * 1000;
-var end = Date.now() + duration;
-
-(function frame() {
-  confetti({
-    particleCount: 6,
-    angle: 60,
-    spread: 70,
-    origin: { x: 0 }
-  });
-  confetti({
-    particleCount: 6,
-    angle: 120,
-    spread: 70,
-    origin: { x: 1 }
-  });
-
-  if (Date.now() < end) {
-    requestAnimationFrame(frame);
-  }
-}());
-</script>
-""", unsafe_allow_html=True)
-
+               components.html("""
+                <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+                <script>
+                confetti({
+                  particleCount: 200,
+                  spread: 100
+                });
+                </script>
+                """, height=0)
 
             # -------- MESSAGGIO --------
             category = data.get("category")
@@ -386,6 +369,7 @@ var end = Date.now() + duration;
                         GITHUB_IMG_BASE_URL + images,
                         use_container_width=True
                     )
+
 
 
 
