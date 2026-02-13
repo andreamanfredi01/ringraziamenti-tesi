@@ -2,5 +2,5 @@ streamlit
 python-dotenv
 gspread
 google-auth
-streamlit-confetti
+
 
