@@ -289,7 +289,33 @@ if nome_input:
                 else:
                     st.info("Nessun nome registrato.")
             else:
-                st.balloons()  # coriandoli per tutti gli altri
+                st.markdown("""
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+var duration = 2 * 1000;
+var end = Date.now() + duration;
+
+(function frame() {
+  confetti({
+    particleCount: 6,
+    angle: 60,
+    spread: 70,
+    origin: { x: 0 }
+  });
+  confetti({
+    particleCount: 6,
+    angle: 120,
+    spread: 70,
+    origin: { x: 1 }
+  });
+
+  if (Date.now() < end) {
+    requestAnimationFrame(frame);
+  }
+}());
+</script>
+""", unsafe_allow_html=True)
+
 
             # -------- MESSAGGIO --------
             category = data.get("category")
@@ -360,6 +386,7 @@ if nome_input:
                         GITHUB_IMG_BASE_URL + images,
                         use_container_width=True
                     )
+
 
 
 
