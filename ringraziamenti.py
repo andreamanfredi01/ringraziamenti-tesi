@@ -350,7 +350,14 @@ if nome_input:
 
             # -------- MESSAGGIO --------
             final_message = data.get("message") or category_content.get(category, {}).get("message") or default_message
-            st.markdown(f"**{final_message}**")
-
+            
+            # Visualizza tutto il testo fuori da finestra scorrevole
+            st.markdown(f"""
+            <div style="white-space: pre-wrap; font-weight: bold; line-height: 1.5; font-size: 16px;">
+            {final_message}
+            </div>
+            """, unsafe_allow_html=True)
+            
+            
 
 
