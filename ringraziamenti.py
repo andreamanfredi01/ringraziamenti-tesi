@@ -76,11 +76,11 @@ personal_thanks = {
     "francesco manfredi": {
         "category": "fratello",
         "password": st.secrets["CICCIO_PASSWORD"],
-        "message": "Ciao Ciccio,
+        "message": """Ciao Ciccio,
                     Ti ringrazio per essere presente in questo momento. É stato un anno di cambiamenti sotto diversi aspetti per te e presto lo sarà anche per me. So che hai passato periodi migliori, e se vuoi parlare di qualcosa sono qua. O ciccia Chiara anche, se preferisci parlare con lei, la obbligo, basta chiedere.
                     So molto poco di tutta la situazione, ma ti dico solo che non c’é motivo di stare così,  vivila con più leggerezza e parlane con qualcuno, anche un professionista o un prete, serve a liberarsi e lasciarsi andare.
                     Mettiti sempre al primo posto.
-                    Per il resto ti ringrazio anche per il futuro, so che nel caso venissi a lavorare a Milano mi ospiteresti gràtis da buon terrone e non é da tutti gràtis",
+                    Per il resto ti ringrazio anche per il futuro, so che nel caso venissi a lavorare a Milano mi ospiteresti gràtis da buon terrone e non é da tutti gràtis""",
         "video": "Bismarck.mov"
     },
     "sara ravelli": {
@@ -375,3 +375,4 @@ if nome_input:
                     final_message = default_message
 
                 st.markdown(f"**{final_message}**")
+
