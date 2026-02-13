@@ -87,7 +87,7 @@ personal_thanks = {
         É finita anche questa e anche stavolta si prospettano cambiamenti. Cambiamenti importanti, d’altronde non c’è due senza tre, ma ci sono anche le eccezioni! E quindi si siamo ancora qua e vedremo cosa ci riserverà il futuro, non posso prometterti nulla, non me la sento di prometterti nulla, valuterò tutte le opzioni prima dal punto di vista lavorativo e poi le rivaluterò tutte dal punto di vista personale. Sei molto molto molto importante per me e vorrei supporto e aiuto nel scegliere, e la ciliegina sarebbe che tu fossi aperta a più orizzonti. Al momento siamo ancora qua, ne abbiamo passate tante e non penso questa sia più difficile di altre, é solo la prossima sfida. 
         Ti ringrazio per tutto, tutti i momenti belli trascorsi insieme ma anche tutti i momenti complicati: é tutto ciò che mi ha portato fin qui, fino ad oggi un momento speciale, sofferto, voluto e interminabile a tratti, un momento che voglio godermi con te, che mi conosci meglio di tutti """,
         "video":["Sara3.mov", "Sara2.mov", "Sara1.mov" ],
-        "image" : ["s1.PNG", "s2.PNG", "s3.PNG"]
+        "image" : ["s1.PNG","s3.PNG", "s2.PNG" ]
     },
     "noa linan": {
         "category": "dublino",
@@ -353,15 +353,14 @@ if nome_input:
                     for img in images:
                         st.image(
                             GITHUB_IMG_BASE_URL + img,
-                            caption=f"Un ricordo speciale per {nome_input.title()}",
                             use_container_width=True
                         )
                 else:
                     st.image(
                         GITHUB_IMG_BASE_URL + images,
-                        caption=f"Un ricordo speciale per {nome_input.title()}",
                         use_container_width=True
                     )
+
 
 
 
