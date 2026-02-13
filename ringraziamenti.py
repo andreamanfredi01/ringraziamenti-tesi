@@ -28,6 +28,17 @@ PARENTI = [
 # -------------------------------
 st.set_page_config(page_title="Ringraziamenti", page_icon="🎓")
 
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #e8f0e3;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.markdown("""
 <style>
 .main { text-align: center; }
@@ -405,6 +416,7 @@ Sono felice di poter condividere questo traguardo con voi.
                         use_container_width=True
                     )
           
+
 
 
 
