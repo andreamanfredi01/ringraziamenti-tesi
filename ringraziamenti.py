@@ -61,7 +61,7 @@ personal_thanks = {
         "category": "genitore",
         "password": st.secrets["PAPI_PASSWORD"],
         "message": "",
-        "image": "Papi.mov"
+        "video": "Papi.mov"
     },
     "chiara manfredi": {
         "category": "sorella",
@@ -362,6 +362,7 @@ if nome_input:
                         caption=f"Un ricordo speciale per {nome_input.title()}",
                         use_container_width=True
                     )
+
 
 
 
