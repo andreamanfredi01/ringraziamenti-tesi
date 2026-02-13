@@ -98,7 +98,7 @@ personal_thanks = {
         Creo que el período que pasé en Dublín fue un tornado de cosas y, al volver a casa y procesarlo todo, me di cuenta de que he encontrado a una persona con defectos por todos lados… para, para, para.                   
         He encontrado a una persona en la que descubría algo bueno cada vez, y cada vez con un matiz diferente. Tienes una luz interior muy fuerte y también te digo que la noche en la que hablamos toda la noche fue algo que nunca me había pasado con otras personas.
         Tengo un recuerdo especial de ti y espero cruzar tu camino otra vez.""",
-        "image" : "dub.HEIC",
+        "image" : "dub.PNG",
         "video": "noa.MOV"         
     },
     "manuel cueto": {
@@ -109,7 +109,7 @@ personal_thanks = {
         Luego te encontré a ti y pasé algunos de los mejores meses de mi vida. Fue una experiencia increíble y te agradezco todos los momentos que compartimos.
         Eres un bravo niño y muy maduro para tu edad. Sigue así y nos vemos pronto.
         PS La sueca ninfo tampoco habría estado mal, la verdad…""",
-        "image" : ["dub.HEIC", "manuel.jpg" , "manuel5.HEIC", "manuel6.HEIC"]
+        "image" : ["dub.PNG", "manuel.jpg" , "manuel5.PNG", "manuel6.PNG"]
     },
     "andrea cucco": {
         "category": "amici",
@@ -364,5 +364,6 @@ if nome_input:
                         caption=f"Un ricordo speciale per {nome_input.title()}",
                         use_container_width=True
                     )
+
 
 
