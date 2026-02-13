@@ -87,7 +87,7 @@ personal_thanks = {
         É finita anche questa e anche stavolta si prospettano cambiamenti. Cambiamenti importanti, d’altronde non c’è due senza tre, ma ci sono anche le eccezioni! E quindi si siamo ancora qua e vedremo cosa ci riserverà il futuro, non posso prometterti nulla, non me la sento di prometterti nulla, valuterò tutte le opzioni prima dal punto di vista lavorativo e poi le rivaluterò tutte dal punto di vista personale. Sei molto molto molto importante per me e vorrei supporto e aiuto nel scegliere, e la ciliegina sarebbe che tu fossi aperta a più orizzonti. Al momento siamo ancora qua, ne abbiamo passate tante e non penso questa sia più difficile di altre, é solo la prossima sfida. 
         Ti ringrazio per tutto, tutti i momenti belli trascorsi insieme ma anche tutti i momenti complicati: é tutto ciò che mi ha portato fin qui, fino ad oggi un momento speciale, sofferto, voluto e interminabile a tratti, un momento che voglio godermi con te, che mi conosci meglio di tutti """,
         "video":["Sara3.mov", "Sara2.mov", "Sara1.mov" ],
-        "image" : ["s1.PNG", "s2.PNG"]
+        "image" : ["s1.PNG", "s2.PNG", "s3.PNG"]
     },
     "noa linan": {
         "category": "dublino",
@@ -108,7 +108,7 @@ personal_thanks = {
         Luego te encontré a ti y pasé algunos de los mejores meses de mi vida. Fue una experiencia increíble y te agradezco todos los momentos que compartimos.
         Eres un bravo niño y muy maduro para tu edad. Sigue así y nos vemos pronto.
         PS La sueca ninfo tampoco habría estado mal, la verdad…""",
-        "image" : ["dub.jpg", "manuel.jpg" , "manuel5.PNG", "manuel6.PNG"]
+        "image" : ["dub.PNG", "manuel.jpg" , "manuel.PNG"]
     },
     "andrea cucco": {
         "category": "amici",
@@ -162,7 +162,7 @@ personal_thanks = {
         "category": "redona",
         "password": st.secrets["RICHI_PASSWORD"],
         "message": "",
-         "image" : ["richi.PNG" , "richi2.PNG", "richi3.PNG"]
+         "image" : ["richi.PNG" , "richi2.PNG", "richi3.PNG", "richi4.PNG"]
     },
     "luca galimberti": {
         "category": "redona",
@@ -363,6 +363,7 @@ if nome_input:
                         caption=f"Un ricordo speciale per {nome_input.title()}",
                         use_container_width=True
                     )
+
 
 
 
