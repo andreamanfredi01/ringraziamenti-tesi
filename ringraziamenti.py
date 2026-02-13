@@ -2,7 +2,7 @@ import streamlit as st
 import os
 import gspread
 from google.oauth2.service_account import Credentials
-from streamlit_confetti import st_confetti
+
 
 
 # -------------------------------
@@ -291,7 +291,7 @@ if nome_input:
                 else:
                     st.info("Nessun nome registrato.")
             else:
-                st_confetti()
+               st.balloons()
 
 
             # -------- MESSAGGIO --------
@@ -363,6 +363,7 @@ if nome_input:
                         GITHUB_IMG_BASE_URL + images,
                         use_container_width=True
                     )
+
 
 
 
