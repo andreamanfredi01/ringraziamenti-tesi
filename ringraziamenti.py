@@ -98,6 +98,7 @@ personal_thanks = {
         Creo que el período que pasé en Dublín fue un tornado de cosas y, al volver a casa y procesarlo todo, me di cuenta de que he encontrado a una persona con defectos por todos lados… para, para, para.                   
         He encontrado a una persona en la que descubría algo bueno cada vez, y cada vez con un matiz diferente. Tienes una luz interior muy fuerte y también te digo que la noche en la que hablamos toda la noche fue algo que nunca me había pasado con otras personas.
         Tengo un recuerdo especial de ti y espero cruzar tu camino otra vez.""",
+        "image": "dub.PNG",
         "video": "noa.MOV"         
     },
     "manuel cueto": {
@@ -216,8 +217,6 @@ category_content = {
         Vi ringrazio per avermi permesso di studiare qua. Siete stati molto disponibili, anche troppo, a permettermi questo corso magistrale. Più di 20000 euro in un paio di anni, quanti soldi — ma poi sì, vostro figlio si laurea alla Cattolica, certo. Ma in cosa? Mercati? Computer? Non saprei come descriverlo senza sembrare altezzoso e spocchioso come alcune persone che ho incontrato qua dentro, e quindi evito. È comunque molto spendibile e richiesta.Vi ringrazio per ogni cosa che avete fatto per me e soprattutto per tutte le “battaglie” che ho portato e porto avanti con voi: se non le avessi fatte sarei uscito macellato da qua. C’è chi esce con 110 e lode da questo corso, come negli altri, ma anche avendo fatto il corso perfetto per me non avrei mai ottenuto quei voti. Non fa per me.
         In ogni caso ho finito e ora vedrò che fare. Neanche l’Italia forse fa per me, ma per questo mi prenderò del tempo per valutare.
         Nel ringraziarvi vi invito a leggere un testo che avevo scritto in quarta o quinta superiore, se lo abbiamo ancora o se lo abbiamo mai avuto.""",
-        "image": "genitori.jpg",
-        "video": "genitori.mp4"
     },
 
     "amici": {
@@ -363,6 +362,7 @@ if nome_input:
                         caption=f"Un ricordo speciale per {nome_input.title()}",
                         use_container_width=True
                     )
+
 
 
 
