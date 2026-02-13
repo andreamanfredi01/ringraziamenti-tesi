@@ -43,8 +43,8 @@ sheet = client.open(SHEET_NAME).sheet1
 # -------------------------------
 # LINK IMMAGINI GITHUB
 # -------------------------------
-GITHUB_IMG_BASE_URL = "https://raw.githubusercontent.com/tuo_nome_utente/tesi-ringraziamenti/main/img/"
-GITHUB_VIDEO_BASE_URL = "https://raw.githubusercontent.com/tuo_nome_utente/tesi-ringraziamenti/main/videos/"
+GITHUB_IMG_BASE_URL = "https://raw.githubusercontent.com/andreamanfredi01/tesi-ringraziamenti/main/img/"
+GITHUB_VIDEO_BASE_URL = "https://raw.githubusercontent.com/andreamanfredi01/tesi-ringraziamenti/main/img/"
 
 # -------------------------------
 # PASSWORD DA SECRETS
@@ -54,13 +54,14 @@ personal_thanks = {
         "category": "genitore",
         "password": st.secrets["MAMMA_PASSWORD"],
         "message": "",
-        "image": "giulia_bianchi.jpg"
+        "image": "",
+         "video" : "Mamms.mov"
     },
     "giorgio manfredi": {
         "category": "genitore",
         "password": st.secrets["PAPI_PASSWORD"],
         "message": "",
-        "image": "giulia_bianchi.jpg"
+        "image": "Papi.mov"
     },
     "chiara manfredi": {
         "category": "sorella",
@@ -70,7 +71,7 @@ personal_thanks = {
                     Ti ringrazio per esserti concessa l’opportunità di avermi accanto. 
                     
                     Ora andrò a lavorare magari lontano o magari no, ovunque vada sappi che potrai venirmi a trovare quando vorrai. Penso che comprerò un animaletto se andrò lontano e lo chiamerò cicciaobesachiara. Appena avrò una minima stabilità economica di riserverò un trattamento speciale, che a me sarebbe piaciuto molto, ma ne parleremo.",
-        "video": "chiara.mov"
+        "video": "Chiara.mov"
     },
     "francesco manfredi": {
         "category": "fratello",
@@ -80,7 +81,7 @@ personal_thanks = {
                     So molto poco di tutta la situazione, ma ti dico solo che non c’é motivo di stare così,  vivila con più leggerezza e parlane con qualcuno, anche un professionista o un prete, serve a liberarsi e lasciarsi andare.
                     Mettiti sempre al primo posto.
                     Per il resto ti ringrazio anche per il futuro, so che nel caso venissi a lavorare a Milano mi ospiteresti gràtis da buon terrone e non é da tutti gràtis",
-        "video": "chiara.mov"
+        "video": "Bismarck.mov"
     },
     "sara ravelli": {
         "category": "",
@@ -90,7 +91,8 @@ personal_thanks = {
                     É finita anche questa e anche stavolta si prospettano cambiamenti. Cambiamenti importanti, d’altronde non c’è due senza tre, ma ci sono anche le eccezioni! E quindi si siamo ancora qua e vedremo cosa ci riserverà il futuro, non posso prometterti nulla, non me la sento di prometterti nulla, valuterò tutte le opzioni prima dal punto di vista lavorativo e poi le rivaluterò tutte dal punto di vista personale. Sei molto molto molto importante per me e vorrei supporto e aiuto nel scegliere, e la ciliegina sarebbe che tu fossi aperta a più orizzonti. Al momento siamo ancora qua, ne abbiamo passate tante e non penso questa sia più difficile di altre, é solo la prossima sfida. 
                     
                     Ti ringrazio per tutto, tutti i momenti belli trascorsi insieme ma anche tutti i momenti complicati: é tutto ciò che mi ha portato fin qui, fino ad oggi un momento speciale, sofferto, voluto e interminabile a tratti, un momento che voglio godermi con te, che mi conosci meglio di tutti ",
-        "video": "chiara.mov"
+        "video":["Sara1.mov", "Sara2.mov", "Sara3.mov"],
+        "image" : ["s1.PNG", "s2.PNG"]
     },
     "noa linan": {
         "category": "dublino",
@@ -102,7 +104,8 @@ personal_thanks = {
                     He encontrado a una persona en la que descubría algo bueno cada vez, y cada vez con un matiz diferente. Tienes una luz interior muy fuerte y también te digo que la noche en la que hablamos toda la noche fue algo que nunca me había pasado con otras personas.
                                                      
                     Tengo un recuerdo especial de ti y espero cruzar tu camino otra vez.",
-        "video": "chiara.mov"
+        "image" : "dub.HEIC",
+        "video": "noa.mov"         
     },
     "manuel cueto": {
         "category": "dublino",
@@ -112,49 +115,43 @@ personal_thanks = {
                     Luego te encontré a ti y pasé algunos de los mejores meses de mi vida. Fue una experiencia increíble y te agradezco todos los momentos que compartimos.
                     Eres un bravo niño y muy maduro para tu edad. Sigue así y nos vemos pronto.
                     PS La sueca ninfo tampoco habría estado mal, la verdad…",
-        "video": "chiara.mov"
+        "image" : ["dub.HEIC", "manuel.jpg" , "manuel5.HEIC", "manuel6.HEIC"]
     },
     "andrea cucco": {
         "category": "amici",
         "password": st.secrets["CUCCO_PASSWORD"],
         "message": "",
-        "video": "chiara.mov"
     },
     "andrea monti": {
         "category": "amici",
         "password": st.secrets["SCIMMIA_PASSWORD"],
         "message": "",
-        "video": "chiara.mov"
     },
     "gabriel persico": {
         "category": "amici",
         "password": st.secrets["GABA_PASSWORD"],
         "message": "",
-        "video": "chiara.mov"
     },
     "david marchese": {
         "category": "amici",
         "password": st.secrets["DAVID_PASSWORD"],
-        "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
-        "video": "chiara.mov"
+        "message": "",
     },
     "matteo locatelli": {
         "category": "amici",
         "password": st.secrets["MATTI_PASSWORD"],
         "message": "",
-        "video": "chiara.mov"
     },
     "luca pesaresi": {
         "category": "amici",
         "password": st.secrets["KAPPA_PASSWORD"],
         "message": "",
-        "video": "chiara.mov"
     },
     "davide villa": {
         "category": "amici",
         "password": st.secrets["VILLA_PASSWORD"],
         "message": "",
-        "video": "chiara.mov"
+
     },
     "francesco cantini": {
         "category": "amici",
@@ -166,37 +163,37 @@ personal_thanks = {
         "category": "amici",
         "password": st.secrets["PASTO_PASSWORD"],
         "message": "",
-        "video": "chiara.mov"
+
     },
     "riccardo galimberti": {
         "category": "redona",
         "password": st.secrets["RICHI_PASSWORD"],
-        "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
-        "video": "chiara.mov"
+        "message": "",
+         "image" : ["richi.PNG" , "richi2.PNG", "richi3.PNG"]
     },
     "luca galimberti": {
         "category": "redona",
         "password": st.secrets["LUCA_PASSWORD"],
-        "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
-        "video": "chiara.mov"
+        "message": "",
+    
     },
     "filippo rossi": {
         "category": "redona",
         "password": st.secrets["ROVO_PASSWORD"],
-        "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
-        "video": "chiara.mov"
+        "message": "",
+    
     },
     "diego gandossi": {
         "category": "redona",
         "password": st.secrets["DIEGO_PASSWORD"],
-        "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
-        "video": "chiara.mov"
+        "message": "",
+    
     },
     "federico mistri": {
         "category": "redona",
         "password": st.secrets["FEDE_PASSWORD"],
-        "message": "Caro Mario, grazie per esserci sempre stato, anche nei momenti più difficili. Questo traguardo porta anche il tuo nome.",
-        "video": "chiara.mov"
+        "message": "",
+        "image" : ["fede1.PNG" , "fede2.PNG"]
     },
     "nicola piazzalunga": {
         "category": "",
@@ -205,7 +202,8 @@ personal_thanks = {
                     È stato un lungo viaggio dalle superiori, da spaccarsi dal ridere.
                     Stavo riguardando quel poco che mi è rimasto in galleria e ne è passato parecchio di tempo…
                     bei momenti",
-        "video": "chiara.mov"
+        "image" : ["nicola2.PNG" , "nicola1.PNG", "nicola5.PNG", "nicola3.PNG"],
+        "video" : "nicola.mp4"
     },
     
     
@@ -240,8 +238,7 @@ Nel ringraziarvi vi invito a leggere un testo che avevo scritto in quarta o quin
 Che dire se non… grazie per tutti i momenti condivisi e per quelli che ancora ci aspettano.
 
 E ora… in alto i calici!""",
-        "image": "amici.jpg",
-        "video": "amici.mp4"
+        "video": ["Gaba(1).mov","Gaba.mov"]
     },
 
     "redona": {
@@ -250,8 +247,7 @@ E ora… in alto i calici!""",
 Che dire se non… grazie per tutti i momenti condivisi e per quelli che ancora ci aspettano.
 
 E ora… in alto i calici!""",
-        "image": "redona.jpg",
-        "video": "redona.mp4"
+        "video": ["Richi.mov","Richi(1).mov", "Richi(2).mov"]
     }
 }
 
@@ -355,3 +351,4 @@ if nome_input:
             
             
             
+
