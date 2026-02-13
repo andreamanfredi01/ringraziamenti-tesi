@@ -277,32 +277,44 @@ if nome_input:
 
     password_input = st.text_input("Inserisci la password", type="password")
 
-    if password_input and password_input == data["password"]:
-        
-        # ---- LISTA NOMI CON CONTEGGIO ----
-        if nome_input == "lista nomi":
-            st.success("📋 Lista dei nomi inseriti:")
-            records = sheet.get_all_records()
-            if records:
-                for row in sorted(records, key=lambda x: x["nome"]):
-                    st.write(f"- {row['nome'].title()} ({row['conteggio']} volte)")
-            else:
-                st.info("Nessun nome registrato.")
-        else:
-            st.balloons()  # coriandoli per tutti gli altri utenti
+    if password_input:
+        if password_input == data["password"]:
 
-            category = data.get("category")
+            # ---- LISTA NOMI CON CONTEGGIO ----
+            if nome_input == "lista nomi":
+                st.success("📋 Lista dei nomi inseriti:")
 
-            # -------- IMMAGINI CATEGORIA --------
-            if category in category_content and category_content[category].get("image"):
-                images = category_content[category]["image"]
-                if isinstance(images, list):
-                    for img in images:
-                        st.image(GITHUB_IMG_BASE_URL + img, use_container_width=True)
+                records = sheet.get_all_records()
+                if records:
+                    for row in sorted(records, key=lambda x: x["nome"]):
+                        st.write(f"- {row['nome'].title()} ({row['conteggio']} volte)")
                 else:
-                    st.image(GITHUB_IMG_BASE_URL + images, use_container_width=True)
+                    st.info("Nessun nome registrato.")
+            else:
+                st.balloons()  # coriandoli per tutti gli altri
 
-            # -------- VIDEO CATEGORIA --------
+            # -------- MESSAGGIO --------
+            category = data.get("category")
+            
+            # Messaggio di categoria
+            category_message = ""
+            if category in category_content and category_content[category].get("message"):
+                category_message = category_content[category]["message"]
+
+            # Messaggio personale
+            personal_message = data.get("message", "")
+
+            # Combina messaggi: categoria prima, poi personale
+            final_message = ""
+            if category_message:
+                final_message += category_message + "\n\n"
+            if personal_message:
+                final_message += personal_message
+
+            st.markdown(f"**{final_message}**")
+
+            # -------- VIDEO --------
+            # Video di categoria
             if category in category_content and category_content[category].get("video"):
                 videos = category_content[category]["video"]
                 if isinstance(videos, list):
@@ -311,20 +323,7 @@ if nome_input:
                 else:
                     st.video(GITHUB_VIDEO_BASE_URL + videos)
 
-            # -------- IMMAGINI PERSONALI --------
-            if data.get("image"):
-                images = data["image"]
-                if isinstance(images, list):
-                    for img in images:
-                        st.image(GITHUB_IMG_BASE_URL + img,
-                                 caption=f"Un ricordo speciale per {nome_input.title()}",
-                                 use_container_width=True)
-                else:
-                    st.image(GITHUB_IMG_BASE_URL + images,
-                             caption=f"Un ricordo speciale per {nome_input.title()}",
-                             use_container_width=True)
-
-            # -------- VIDEO PERSONALI --------
+            # Video personali
             if data.get("video"):
                 videos = data["video"]
                 if isinstance(videos, list):
@@ -333,21 +332,35 @@ if nome_input:
                 else:
                     st.video(GITHUB_VIDEO_BASE_URL + videos)
 
-            # -------- MESSAGGIO --------
-            final_message = data.get("message") or category_content.get(category, {}).get("message") or default_message
-            
-            # Visualizza tutto il testo fuori da finestra scorrevole
-            st.markdown(f"""
-            <div style="white-space: pre-wrap; line-height: 1.5; font-size: 16px;">
-            {final_message}
-            </div>
-            """, unsafe_allow_html=True)
-            
-            
+            # -------- FOTO / IMMAGINI --------
+            # Immagini di categoria
+            if category in category_content and category_content[category].get("image"):
+                images = category_content[category]["image"]
+                if isinstance(images, list):
+                    for img in images:
+                        st.image(
+                            GITHUB_IMG_BASE_URL + img,
+                            use_container_width=True
+                        )
+                else:
+                    st.image(
+                        GITHUB_IMG_BASE_URL + images,
+                        use_container_width=True
+                    )
 
-
-
-
-
-
-
+            # Immagini personali
+            if data.get("image"):
+                images = data["image"]
+                if isinstance(images, list):
+                    for img in images:
+                        st.image(
+                            GITHUB_IMG_BASE_URL + img,
+                            caption=f"Un ricordo speciale per {nome_input.title()}",
+                            use_container_width=True
+                        )
+                else:
+                    st.image(
+                        GITHUB_IMG_BASE_URL + images,
+                        caption=f"Un ricordo speciale per {nome_input.title()}",
+                        use_container_width=True
+                    )
