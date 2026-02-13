@@ -320,7 +320,7 @@ if nome_input:
                 if st.button("Quando hai finito clicca 👇"):
                     st.success("gabri… gabri giù tutto 🍻")
             
-            if category == "amici":
+            if category == "redona":
                 st.write("---")
                 if st.button("Quando hai finito clicca 👇"):
                     st.success("Giù tutto cunningham🍻")
@@ -375,6 +375,7 @@ if nome_input:
                         use_container_width=True
                     )
           
+
 
 
 
