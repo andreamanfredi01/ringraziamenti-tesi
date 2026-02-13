@@ -32,12 +32,18 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-color: #e8f0e3;
+        background-color: #1f3d2b;
+    }
+
+    /* Rende il testo leggibile su sfondo scuro */
+    h1, h2, h3, h4, h5, h6, p, div, span, label {
+        color: #f5f5f5 !important;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
+
 
 st.markdown("""
 <style>
@@ -416,6 +422,7 @@ Sono felice di poter condividere questo traguardo con voi.
                         use_container_width=True
                     )
           
+
 
 
 
