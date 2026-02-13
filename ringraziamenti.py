@@ -311,7 +311,7 @@ if nome_input:
             if personal_message:
                 final_message += personal_message
 
-            st.markdown(f"**{final_message}**")
+            st.markdown(final_message)
 
             # -------- VIDEO --------
             # Video di categoria
@@ -364,3 +364,4 @@ if nome_input:
                         caption=f"Un ricordo speciale per {nome_input.title()}",
                         use_container_width=True
                     )
+
