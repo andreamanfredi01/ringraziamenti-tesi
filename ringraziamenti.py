@@ -99,7 +99,7 @@ personal_thanks = {
         He encontrado a una persona en la que descubría algo bueno cada vez, y cada vez con un matiz diferente. Tienes una luz interior muy fuerte y también te digo que la noche en la que hablamos toda la noche fue algo que nunca me había pasado con otras personas.
         Tengo un recuerdo especial de ti y espero cruzar tu camino otra vez.""",
         "image" : "dub.HEIC",
-        "video": "noa.mov"         
+        "video": "noa.MOV"         
     },
     "manuel cueto": {
         "category": "dublino",
@@ -364,4 +364,5 @@ if nome_input:
                         caption=f"Un ricordo speciale per {nome_input.title()}",
                         use_container_width=True
                     )
+
 
