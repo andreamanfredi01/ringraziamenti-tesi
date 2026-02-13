@@ -363,6 +363,13 @@ if nome_input:
                         GITHUB_IMG_BASE_URL + images,
                         use_container_width=True
                     )
+            # -------- EXTRA PER AMICI --------
+            if category == "amici":
+                st.write("---")
+                if st.button("Quando hai finito clicca 👇"):
+                    st.success("gabri… gabri giù tutto 🍻")
+
+
 
 
 
