@@ -313,6 +313,17 @@ if nome_input:
                 final_message += personal_message
 
             st.markdown(final_message)
+            
+            # -------- EXTRA PER AMICI --------
+            if category == "amici":
+                st.write("---")
+                if st.button("Quando hai finito clicca 👇"):
+                    st.success("gabri… gabri giù tutto 🍻")
+            
+            if category == "amici":
+                st.write("---")
+                if st.button("Quando hai finito clicca 👇"):
+                    st.success("Giù tutto cunningham🍻")
 
             # -------- VIDEO --------
             # Video di categoria
@@ -363,11 +374,8 @@ if nome_input:
                         GITHUB_IMG_BASE_URL + images,
                         use_container_width=True
                     )
-            # -------- EXTRA PER AMICI --------
-            if category == "amici":
-                st.write("---")
-                if st.button("Quando hai finito clicca 👇"):
-                    st.success("gabri… gabri giù tutto 🍻")
+          
+
 
 
 
