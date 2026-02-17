@@ -32,7 +32,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-color: #1f3d2b;
+        background-color: #0c1e61;
     }
 
     /* Rende il testo leggibile su sfondo scuro */
@@ -422,6 +422,7 @@ Sono felice di poter condividere questo traguardo con voi.
                         use_container_width=True
                     )
           
+
 
 
 
